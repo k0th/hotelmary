@@ -10,6 +10,12 @@ import { BarComponent } from './modules/bar/bar.component';
 import { ServiciosComponent } from './modules/servicios/servicios.component';
 import { ContactoComponent } from './modules/contacto/contacto.component';
 import { ReservacionComponent } from './modules/reservacion/reservacion.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SlideComponent } from './components/slide/slide.component';
+import { HomeComponent } from './modules/home/home.component';
+import { BookingComponent } from './components/booking/booking.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   declarations: [
@@ -20,13 +26,19 @@ import { ReservacionComponent } from './modules/reservacion/reservacion.componen
     BarComponent,
     ServiciosComponent,
     ContactoComponent,
-    ReservacionComponent
+    ReservacionComponent,
+    NavbarComponent,
+    SlideComponent,
+    HomeComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    CarouselModule.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, SlideComponent]
 })
 export class AppModule { }
